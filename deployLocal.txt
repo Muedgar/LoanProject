@@ -1,0 +1,10 @@
+step 1: install node.js
+step 2: open this project in your text editor
+step 3: run "npm install" command in terminal after navigating to this project directory
+step 4: create a ".env" file
+step 5: in the created file in step 4  add the following
+PORT=4550
+MONGO_URI=add_your_mongodb_connection_string_here
+step 6: in terminal run "npm run dev"
+step 7: open the app on http://localhost:4550/
+step 8: for more information contact me on "edgarmutangana@gmail.com"

@@ -5,16 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Calculator | Welcome</title>
+    <link rel="shortcut icon" href="./loanlogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
+    
 </head>
 <body>
-    <h1>Welcome to loan calculator</h1>
-    <form id="loancalc" action="">
-        <input type="text" name="loanamount" id="loanamount" placeholder="Enter Loan Amount">
-        <input type="text" name="loanterm" id="loanterm" placeholder="Enter Loan Term / in years">
-        <input type="text" name="loaninterest" id="loaninterest" value="0.8% monthly interest equal to 10% annual interest">
-        <input type="submit" value="Calculate Loan Information">
-    </form>
+    <div class="container-fluid">
+        <div class="titlecontainer">
+            <h1>Welcome to loan calculator</h1>
+            <a href="#answers" id="viewloaninfo">View Loan Information</a>
+            <a href="/dashboard">Loan Dashboard</a>
+        </div>
+    
+        <form id="loancalc" action="">
+            <input class="form-control" type="number" name="loanamount" id="loanamount" placeholder="Enter Loan Amount / INR">
+            <input class="form-control" type="number" name="loanterm" id="loanterm" placeholder="Enter Loan Term / in years">
+            <input class="form-control" type="number" name="loaninterest" id="loaninterest" placeholder="10% annual interest" disabled>
+            <input id="submitloan" class="btn btn-info" type="submit" value="Calculate Loan Information">
+        </form>
+        <div id="answers"></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
