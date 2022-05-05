@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator | Welcome</title>
+    <link rel="shortcut icon" href="./loanlogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="titlecontainer">
+            <h1>Welcome to loan calculator</h1>
+            <a href="/dashboard">Create Loans</a>
+            <a href="/">Back</a>
+        </div>
+        <div>
+            <form id="userdata" action="" class="form">
+                <label for="">Your Ip</label><br>
+                <label for="" id="ipLabel"></label><br><br>
+                <label for="">Your location</label><br>
+                <label for="" id="locationLabel"></label>
+            </form>
+        </div>
+        <div id="answers"></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="./view.js"></script>
+</body>
+</html>
