@@ -57,15 +57,15 @@ function buildTable(output,loanAmount,monthlyRate,totalNumberOfPayments,payment)
 		amortizationTable += "<td style='border: 1px solid black'>" + (count + 1) + "</td>";
 		
 		//main principal amount that is a global variable
-		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> INR" + parseFloat(loanAmount).toFixed(2) + "</td>";
+		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> (INR) " + parseFloat(loanAmount).toFixed(2) + "</td>";
 		
 		//interest payment for this row
 		interest = loanAmount * monthlyRate;
-		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> INR" + parseFloat(interest).toFixed(2) + "</td>";
+		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> (INR) " + parseFloat(interest).toFixed(2) + "</td>";
 		
 		//principal payment for this row
 		monthlyPrincipal = payment - interest;
-		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> INR" + parseFloat(monthlyPrincipal).toFixed(2) + "</td>";
+		amortizationTable += "<td style='border: 1px solid black; overflow-x:scroll'> (INR) " + parseFloat(monthlyPrincipal).toFixed(2) + "</td>";
 		
 		//end the table row on each iteration of the loop	
 		amortizationTable += "</tr>";
