@@ -1,3 +1,7 @@
+
+document.getElementById("userdata").addEventListener('submit',e=> {
+    e.preventDefault();
+})
 document.getElementById("loancalc").addEventListener('submit',e=> {
     e.preventDefault();
 
@@ -80,3 +84,28 @@ function buildTable(output,loanAmount,monthlyRate,totalNumberOfPayments,payment)
     // navigate to the 
     document.getElementById("viewloaninfo").click();
 }
+
+getGeoLocation();
+getIp();
+
+async function getIp() {
+    await axios.get('https://ipapi.co/json/')
+  .then(function(response) {
+      const {ip} =response.data;
+      document.getElementById("ipLabel").innerHTML = ip;
+    console.log(ip);
+  }).catch(e=>new Error(e));
+}
+
+function getGeoLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        document.getElementById("locationLabel").innerHTML = "Geolocation is not supported by this browser.";
+      }
+}
+
+function showPosition(position) {
+    document.getElementById("locationLabel").innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }

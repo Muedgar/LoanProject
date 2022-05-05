@@ -8,3 +8,5 @@ MONGO_URI=add_your_mongodb_connection_string_here
 step 6: in terminal run "npm run dev"
 step 7: open the app on http://localhost:4550/
 step 8: for more information contact me on "edgarmutangana@gmail.com"
+
+or you can use the remote version deployed on heroku here:  https://nameless-journey-32004.herokuapp.com/
